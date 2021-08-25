@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasisficacion de imagenes</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+</head>
+<body>
+                <img id="img" crossorigin="anonymous">
+                <div id="descripcion-imagen"></div>
+                <div>
+                <video autoplay="" playsinline muted id="webcam"></video>
+                <div id="console"></div>
+                <div>
+                    <button id="clase-a" onclick="addExample(1)">Denis</button>
+                    <button id="clase-b" onclick="addExample(2)">tijeras</button>
+                    <button id="clase-c" onclick="addExample(3)">fosforo</button>
+                    <button id="clase-d" onclick="addExample(4)">alcohol</button>
+                    <button id="clase-e" onclick="addExample(5)">celular</button>
+                </div>
+                <div id="console2"></div></div>
+        <script src="codigo.js"></script>
+    </body>
+</html>
