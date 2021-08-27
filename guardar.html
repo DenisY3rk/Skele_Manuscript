@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DKDN</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+</head>
+<body>
+  
+   <!-- NAVBAR-->
+   <nav class="navbar navbar-expand-sm navbar-dark bg-primary" id="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" alt="" width="75">
+            <img src="img/logoSkele.png" alt="" width="250">>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="navbar-brand" aria-current="page" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="navbar-brand" href="busqueda.html">Buscar</a></li>
+              <li class="nav-item"><a class="navbar-brand" href="guardar.html">Guardar</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    
+    
+    
+    <div id="play" >
+    
+      <!--***************************************************************************************-->
+      
+      <div class="container-sm p-5">
+        
+        <div class="row justify-content-center align-items-center">
+          <img src="img/logoSkele.png" alt="Imagen"   id="img" class="w-50"  >
+          <div class="col-3 d-none d-md-block">
+            <video autoplay="" playsinline muted id="webcam" style="width: 120%;" style="text-align:center;"></video>
+            
+            
+              
+          </div>
+    
+          
+          <div class="row align-items-center" style="color:rgb(161, 161, 161)">
+            <div class="col">
+              
+            </div>
+            <div class="col text-center" style="color:rgb(85, 85, 85)">
+      
+             
+              
+              <hr>
+      
+              <select class="form-control input-lg" id="IdEntrenarObjeto" style="width: 100%;margin-top: 10px;">
+      
+                <option value="1">Mayuscula</option>
+                <option value="2">Minuscula</option>
+                <option value="3">Numeros</option>
+                <option value="4">Idioma</option>
+                
+      
+              </select>
+              <br>
+              
+              <button class="btn btn-primary" onClick="addExample()" style="width: 100%;margin-top: 10px;">GUARDAR ENTRENAMIENTO</button>
+              
+              <button class="btn btn-primary" onClick="guardarmodelo()" style="width: 100%;margin-top: 10px;">SALVAR MODELO</button>
+              
+              <br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+            <div class="col text-center" style="color:rgb(161, 161, 161)">
+      
+            </div>
+          </div>
+
+          <div class="col-9">
+            <div class="row justify-content-md-center">
+              <div class="col p-1">
+                <div class="card bg-primary text-white">   
+                  <div class="row">
+                    <div class="col-md-6">
+                      <img src="img/lostabc.jpg" class="w-50"  alt="...">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card-body">
+                        <h5 class="card-title">Descripción</h5>
+                        <div id="descripcion-imagen" class="card-text"></div>
+                        <p>Se tendra que escoger el idioma o alguna caracteristica del texto luego, presionar el boton guardar entrenamiento mientras mas fotos se tomen sera mas precisa la busqueda de textos</p>
+                      </div><!--card-body-->
+                    </div><!--col-->
+                  </div><!--row-->
+                </div><!--CARD-->
+              </div><!--col-->
+              
+         
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+  
+  <div id="footer" class="p-5">
+    <div class="container w-50 pt-5">
+      <div class="row row-cols-md-2 justify-content-md-center">
+        <div class="col text-center">
+          <img src="img/logo.png" alt="" width="75">
+        </div>
+      </div>
+      <div class="row justify-content-md-center py-5">
+        <div class="col text-center font-weight-light">
+          <p>.....................................................</p>
+          <p>©Derechos Reservados</p>
+        </div>
+        
+      </div>
+      <div class="row"></div>
+    </div>
+  </div>
+  <script src="index.js?v43"></script>
+
+</body>
+</html>

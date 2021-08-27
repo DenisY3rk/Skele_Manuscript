@@ -1,27 +1,75 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clasisficacion de imagenes</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skele</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
 </head>
 <body>
-                <img id="img" crossorigin="anonymous">
-                <div id="descripcion-imagen"></div>
-                <div>
-                <video autoplay="" playsinline muted id="webcam"></video>
-                <div id="console"></div>
-                <div>
-                    <button id="clase-a" onclick="addExample(1)">Denis</button>
-                    <button id="clase-b" onclick="addExample(2)">tijeras</button>
-                    <button id="clase-c" onclick="addExample(3)">fosforo</button>
-                    <button id="clase-d" onclick="addExample(4)">alcohol</button>
-                    <button id="clase-e" onclick="addExample(5)">celular</button>
-                </div>
-                <div id="console2"></div></div>
-        <script src="codigo.js"></script>
-    </body>
+  
+   <!-- NAVBAR-->
+   <nav class="navbar navbar-expand-sm navbar-dark bg-primary" id="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="" width="75">
+            <img src="img/logoSkele.png" alt="" width="250">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              
+                <li class="nav-item"><a class="navbar-brand" aria-current="page" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="navbar-brand" href="busqueda.html">Buscar </a></li>
+                <li class="nav-item"><a class="navbar-brand" href="guardar.html">Guardar</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <div id="play" >
+    <hr> <hr> <hr> <hr> <hr> <hr> <hr>
+          
+    <input type="button" class="btn btn-primary" onclick="location.href='busqueda.html';" value="BUSCAR PALABRAS ILEGIBLES" style="width: 100%;margin-top: 10px;margin-bottom: 10px;"/>
+                <hr>  <hr>  <hr>  <hr> <hr> <hr> <hr> <hr>         
+    <input type="button" class="btn btn-primary" onclick="location.href='guardar.html';" value="ENTRENAR NUEVAS LETRAS Y/O TEXTO" style="width: 100%;margin-top: 10px;margin-bottom: 10px;"/>
+    
+  <hr> <hr> <hr> <hr>  <hr>  <hr>  <hr>  <hr>  <hr>  <hr>
+
+    </div>
+  <div id="footer" class="p-5">
+    <div class="container w-50 pt-5">
+      <div class="row row-cols-md-2 justify-content-md-center">
+        <div class="col text-center">
+          <img src="img/logo.png" alt="" width="75">
+        </div>
+      </div>
+      <div class="row justify-content-md-center py-5">
+        <div class="col text-center font-weight-light">
+          <p>.....................................................</p>
+          <p>©Derechos Reservados</p>
+        </div>
+        
+      </div>
+      <div class="row"></div>
+    </div>
+  </div>
+  <script src="index.js?v43"></script>
+
+</body>
 </html>
