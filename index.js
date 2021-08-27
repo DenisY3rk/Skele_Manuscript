@@ -40,7 +40,7 @@ async function app(){
       result2 = {}
     }
 
-    const clases = ["No entrenado","A","B","C","D","E","F","G","H"];
+    const clases = ["No entrenado","A","B","C","D","E","F","G","I","K","L","M","N","O","P","Q"];
 
     descCam1.innerHTML = 
     "</p><h4>PROBABILIDAD</h4><p>" + result[0].probability + "</p>";
@@ -89,7 +89,7 @@ async function addExample(){
 }
 
 async function CargarDATA(classifierModel){
-  console.log("HOLA");
+  console.log("Modelo cargado");
   fetch('datos.json')
   .then(respuesta => respuesta.json())
   .then(usuarios => {
